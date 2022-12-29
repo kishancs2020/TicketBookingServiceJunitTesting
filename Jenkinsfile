@@ -8,7 +8,7 @@ pipeline {
         }
         stage('install') {
             steps {
-                echo "Install stage"
+                echo "Software install to start the package"
             }
         }
         stage('test') {
