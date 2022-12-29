@@ -13,7 +13,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                echo "Test pipeline again"
+                echo "Test pipeline"
             }
         }
         stage('package') {
