@@ -8,7 +8,7 @@ pipeline {
         }
         stage('install') {
             steps {
-                echo "Software install to start the package"
+                echo "First Test in Jenkins"
             }
         }
         stage('test') {
