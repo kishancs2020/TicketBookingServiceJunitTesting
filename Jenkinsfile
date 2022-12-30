@@ -18,7 +18,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                echo "Package added"
+                echo "Second test in Package"
             }
         }
     }
