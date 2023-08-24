@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage('git repo & clean') {
             steps {
-               bat "rmdir  /s /q TicketBookingServiceJunitTesting"
-                bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
+               //bat "rmdir  /s /q TicketBookingServiceJunitTesting"
+                //bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
+                bat "git clone https://github.com/bolarum/TicketBookingServiceJunitTesting.git"
                 bat "mvn clean -f TicketBookingServiceJunitTesting"
             }
         }
