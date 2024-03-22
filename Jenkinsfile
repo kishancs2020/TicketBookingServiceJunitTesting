@@ -1,26 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('git repo & clean') {
+        stage('stage 1') {
             steps {
-               bat "rmdir  /s /q TicketBookingServiceJunitTesting"
-                bat "git clone https://github.com/kishancs2020/TicketBookingServiceJunitTesting.git"
-                bat "mvn clean -f TicketBookingServiceJunitTesting"
+               echo "stage 1"
             }
         }
         stage('install') {
             steps {
-                bat "mvn install -f TicketBookingServiceJunitTesting"
+                echo "First Test to integrate the Jenkins"
             }
         }
         stage('test') {
             steps {
-                bat "mvn test -f TicketBookingServiceJunitTesting"
+                echo "Test pipeline"
             }
         }
         stage('package') {
             steps {
-                bat "mvn package -f TicketBookingServiceJunitTesting"
+                echo "Second test in Package"
             }
         }
     }
